@@ -30,6 +30,9 @@ dependencies:
   cupertino_icons: ^0.1.3
 
 dev_dependencies:
+  source_gen:
+  build_runner:
+  mustache4dart:
   flutter_test:
     sdk: flutter
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterWidgets/framework/router/pretty_router.register.g.dart';
 import 'package:flutterWidgets/mcrow/mcrow_widget_list.dart';
 import 'package:flutterWidgets/other/other_widget_list.dart';
 import 'package:flutterWidgets/proxy/proxy_widget_list.dart';
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MainPage(),
+      routes: PrettyRouterRegister.register(),
     );
   }
 }
