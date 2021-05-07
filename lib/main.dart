@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutterWidgets/framework/router/pretty_router.register.g.dart';
 import 'package:flutterWidgets/mcrow/mcrow_widget_list.dart';
 import 'package:flutterWidgets/other/other_widget_list.dart';
 import 'package:flutterWidgets/proxy/proxy_widget_list.dart';
@@ -7,11 +6,15 @@ import 'package:flutterWidgets/scrow/scrow_widget_list.dart';
 import 'package:flutterWidgets/sliver/sliver_widget_list.dart';
 import 'package:flutterWidgets/stful/stful_widget_list.dart';
 import 'package:flutterWidgets/stless/stless_widget_list.dart';
+import 'package:frouter/annotation/router_register.dart';
+
+import 'main.router_register.g.dart';
 
 void main() {
   runApp(MyApp());
 }
 
+@RouterRegister()
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -22,7 +25,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MainPage(),
-      routes: PrettyRouterRegister.register(),
+      routes: FRouterRegister.register(),
     );
   }
 }

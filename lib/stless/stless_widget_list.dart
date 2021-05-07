@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterWidgets/config/widget_config.dart';
-import 'package:flutterWidgets/framework/router/pretty_router.dart';
+import 'package:frouter/frouter.dart';
 
 class StlessWidgetList extends StatelessWidget {
   var widgetConfigList = <WidgetConfig>[
@@ -39,7 +39,7 @@ class StlessWidgetList extends StatelessWidget {
           children: [
             ListTile(
               leading: Container(
-                width: 100,
+                width: 50,
                 height: 100,
                 decoration: ShapeDecoration(
                   image: DecorationImage(
@@ -47,13 +47,13 @@ class StlessWidgetList extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5),
+                    borderRadius: BorderRadius.circular(45),
                   ),
                 ),
               ),
               title: Text(config.name),
               contentPadding: EdgeInsets.all(10),
-              onTap: () => PrettyRouter.router(context,
+              onTap: () => FRouter.router(context,
                   "${config.routerUrl}?title=${config.name}&coverUrl=${config.coverUrl}"),
             ),
             Divider(
